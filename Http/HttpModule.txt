@@ -1,0 +1,47 @@
+WebScraping Python
+
+Conceitos
+
+Protocolo HTTP
+- Protocolo de interconexão de Redes de Computadores.
+- Protocolo: Padronização do envio e recebimento de informações.
+
+- HTTP: HyperText Transfer Protocol.
+		- Define o modo como os sites são acessados na internet;
+		- request -> answer.
+
+	.Respostas de requests
+		- Strings padronizadas:
+			.Codigo de Status;
+			.Cabeçalho;
+			.Conteúdo.
+
+	.Métodos HTTP (os mais importantes pro WEBSCRAPING)
+		- GET: Solicita um recurso para o server (uma página da Web, por exemplo).
+		- POST: Enviamos uma informação para o server.	
+	
+	.StatusCode
+		- informativo (1XX)
+			.Respostas sem conteúdom contendo apenas informações sobre a comunicação.
+			Exemplo:
+				Processing (102) - O server ainda está processando o request e, por enquanto, não possui conteúdo para enviar.
+
+		- Sucesso (2XX) 
+			.A mensagem chegou ao servidor e era válida.
+			Exemplo:
+				OK (200) - Tudo ocorreu exatamente como planejado: o request estava OK e o server respondeu adequadamente.
+
+		- Redirecionamento (3XX)
+			. O recurso buscado está em outro server.
+			Exemplo:
+				Moved Permanently (301) - O recurso buscado mudou permanentemente de endereço.
+
+		- Erro do client (4XX)
+			. O request possui algum erro.
+			Exemplo:
+				Not Found (404) - O recurso buscado não existe.
+
+		- Erro do servidor (5XX)
+			. O server não pode atender o request.
+			Exemplo:
+				Service Unavailable (503) - O server não é capaz de atender à sua solicitação no momento (por exemplo, por estar sobrecarregado ou em manutenção).
