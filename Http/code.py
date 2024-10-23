@@ -11,8 +11,12 @@ site = BeautifulSoup(content, "html.parser")
 
 section = site.find_all("li", attrs={"class":"col-xs-6 col-sm-4 col-md-3 col-lg-3"})
 
+dados = []
 for item in section:
-    titulos = item.find("h3")
+    titulo = item.find("h3")
     valor = item.find("p", attrs={"class": "price_color"})
-    print(titulos.text, valor.text, sep="\n")
-    
+    dados.append([titulo.text, valor.text])
+
+livros = pd.DataFrame(dados, columns=["Titulo", "Preço"])
+
+livros.to_excel("BaseDeDadosRm.xlsx", index=False)
