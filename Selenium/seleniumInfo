@@ -1,0 +1,10 @@
+Selenium
+
+1. O que é? 
+    .Biblioteca que permite automatizar tarefas em sites da web (Web Driver).
+
+2. Instalação.
+    .É necessario instalar um driver para o navegador no qual irá executar o programa (mesma versão).
+    
+
+
